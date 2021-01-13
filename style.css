@@ -1,0 +1,57 @@
+  body{
+    margin:0;
+  }
+  a {
+  /*웹페이지에 있는 모든 a 태그에 대해서*/
+    color:black;
+    text-decoration: none;
+  }
+  /*순서에 영향을 받음 - class */
+  /*ID선택자와 class선택자 중 ID 선택자가 우선함.*/
+  /*class 선택자와 tag선택자 중 class 선택자가 우선함.*/
+  /* 힘 : tag << class << ID */
+
+  /*css : 관리의 용이성. html과의 분리. html을 정보로서만 수행하도록.*/
+  /*
+  a : 선택자. Selector //
+  content in {} -> Declaration
+  color -> Property
+  red -> Value
+  */
+  /*!!!!!!!!!!!!!!!!!!!!!!style : html의 "태그"*/
+  h1  {
+    font-size:45px;
+    /*--px, --%, -.-em, --vw
+    (viewport width - follow the size of the browser window*/
+    text-align: center;
+    border-bottom:1px solid gray;
+    margin:0;
+    padding:20px;
+  }
+  #grid ol {
+    /*모든 ol 중에 부모가 #grid인 것*/
+    border-right:1px solid gray;
+    width:100px;
+    margin:0;
+    padding:20px;
+    padding-left:33px;
+
+  }
+  #grid{
+    display:grid;
+    grid-template-columns: 150px 1fr;
+  }
+  #grid #article{
+    padding-left:25px;
+  }
+  @media(max-width:800px){
+    #grid{
+      display:block;
+    }
+    #grid ol{
+      border-right: none;
+    }
+    h1{
+      border-bottom: none;
+    }
+  }
