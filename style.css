@@ -1,5 +1,5 @@
   body{
-    margin:0;
+    margin:0
   }
   a {
   /*웹페이지에 있는 모든 a 태그에 대해서*/
@@ -43,6 +43,14 @@
   }
   #grid #article{
     padding-left:25px;
+  }
+  input{
+      margin-left:15px;
+      background-color:Gainsboro;
+      border-style:none;
+      height:40px;
+      width:80px;
+      border-radius:10px;
   }
   @media(max-width:800px){
     #grid{

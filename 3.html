@@ -1,33 +1,78 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-R26EVGZMDQ"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-      gtag('config', 'G-R26EVGZMDQ');
+    gtag('config', 'G-R26EVGZMDQ');
     </script>
     <title>WEB1 - JavaScript</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+</head>
+<body>
+
     <h1><a href="index.html">WEB</a></h1>
+    <!--Start of JavaScript-->
+    <!--
+    <input type="button" value="night" onclick="
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    changeAtoNight();
+    "/>
+    <input type="button" value="day" onclick="
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    changeAtoDay();
+    "/>
+    -->
+    <input type="button" value="night" onclick="
+    var target=document.querySelector('body');
+    if(this.value==='night'){
+        target.style.backgroundColor='black';
+        target.style.color='white';
+        changeAtoNight();
+        this.value='day';
+    } else {
+        target.style.backgroundColor='white';
+        target.style.color='black';
+        changeAtoDay();
+        this.value='night';
+    }
+    ">
+    <script>
+        var changeAtoNight = function(){
+            var selectedNight = document.querySelectorAll('body a');
+
+            for (var i=0; i<selectedNight.length; i++){
+                selectedNight[i].style.color='white';
+            }
+        }
+        var changeAtoDay = function(){
+            var selectedDay = document.querySelectorAll('body a');
+
+            for (var i=0; i<selectedDay.length; i++){
+                selectedDay[i].style.color='black';
+            }
+        }
+    </script>
+    <!--End of JavaScript-->
     <div id="grid">
-      <ol>
-        <li><a href="1.html">HTML</a></li>
-        <li><a href="2.html">CSS</a></li>
-        <li><a href="3.html">JavaScript</a></li>
-      </ol>
-      <div id="article">
-        <h2>JavaScript</h2>
-        <p>
-          JavaScript, often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
-        </p>
-      </div>
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+        </ol>
+        <div id="article">
+            <h2>JavaScript</h2>
+            <p>
+                JavaScript, often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language. Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production. It is used to make webpages interactive and provide online programs, including video games. The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine. Each of the many JavaScript engines represent a different implementation of JavaScript, all based on the ECMAScript specification, with some engines not supporting the spec fully, and with many engines supporting additional features beyond ECMA.
+            </p>
+        </div>
     </div>
-  </body>
+</body>
 </html>
