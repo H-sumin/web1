@@ -13,54 +13,12 @@
     <title>WEB1 - JavaScript</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="colors.js"></script>
 </head>
 <body>
-
+    <input id="night_day" type="button" value="night" onclick="nightDayHandler(this);"/>
     <h1><a href="index.html">WEB</a></h1>
-    <!--Start of JavaScript-->
-    <!--
-    <input type="button" value="night" onclick="
-    document.querySelector('body').style.backgroundColor='black';
-    document.querySelector('body').style.color='white';
-    changeAtoNight();
-    "/>
-    <input type="button" value="day" onclick="
-    document.querySelector('body').style.backgroundColor='white';
-    document.querySelector('body').style.color='black';
-    changeAtoDay();
-    "/>
-    -->
-    <input type="button" value="night" onclick="
-    var target=document.querySelector('body');
-    if(this.value==='night'){
-        target.style.backgroundColor='black';
-        target.style.color='white';
-        changeAtoNight();
-        this.value='day';
-    } else {
-        target.style.backgroundColor='white';
-        target.style.color='black';
-        changeAtoDay();
-        this.value='night';
-    }
-    ">
-    <script>
-        var changeAtoNight = function(){
-            var selectedNight = document.querySelectorAll('body a');
-
-            for (var i=0; i<selectedNight.length; i++){
-                selectedNight[i].style.color='white';
-            }
-        }
-        var changeAtoDay = function(){
-            var selectedDay = document.querySelectorAll('body a');
-
-            for (var i=0; i<selectedDay.length; i++){
-                selectedDay[i].style.color='black';
-            }
-        }
-    </script>
-    <!--End of JavaScript-->
     <div id="grid">
         <ol>
             <li><a href="1.html">HTML</a></li>
